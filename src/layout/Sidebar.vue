@@ -39,7 +39,6 @@
 </template>
 
 <script>
-// import { mapState } from 'vuex'
 export default {
   name: "Sidebar",
   computed: {
@@ -48,7 +47,6 @@ export default {
         return this.$store.state.drawer;
       },
       set(val) {
-        // console.log(val)
         return this.$store.dispatch('setDrawer', val);
       },
     }
@@ -68,7 +66,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-
-</style>

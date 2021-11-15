@@ -1,8 +1,7 @@
 <template>
-    <div class="pa-10 font-weight-medium">Registrace</div>
-    <v-subheader class="pl-10 font-weight-small">Registrací získáváte možnost vyhrát zájezd za 60 000 Kč!</v-subheader>
-    
     <v-container>
+      <div class="pa-10 font-weight-medium">Registrace</div>
+      <v-subheader class="pl-10 font-weight-small">Registrací získáváte možnost vyhrát zájezd za 60 000 Kč!</v-subheader>
       <v-form ref="form" v-model="valid" lazy-validation>
         <v-row>
           <v-col
@@ -51,6 +50,7 @@
 </template>
 
 <script>
+import { http } from '@/plugins/axios'
   export default {
     name: 'Registration',
     data() {
@@ -84,7 +84,15 @@
           lastName: this.lastName,
           email: this.email,
         }
-
+        http.post(
+            '/some/url/to/post/data',
+            data
+        ).then(
+            response => (
+                console.log(response)
+                //some action with response
+            )
+        );
       }
     }
   }

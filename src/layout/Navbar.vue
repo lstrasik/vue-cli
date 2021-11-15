@@ -1,25 +1,28 @@
 <template>
   <v-app-bar
-      app
       color="primary"
       dark
       src="fuji.jpg"
       height="200px"
+      class="appbar"
+      app
   >
 
 
-    <v-app-bar-nav-icon class="black--text" @click="drawer = !drawer"></v-app-bar-nav-icon>
+    <v-app-bar-nav-icon class="black--text ml-3" @click="drawer = !drawer"></v-app-bar-nav-icon>
 
-    <v-app-bar-title class="black--text font-weight-bold" >Procestujte s námi svět!</v-app-bar-title>
+    <v-toolbar-title class="black--text font-weight-bold" >Procestujte s námi svět!</v-toolbar-title>
 
-
-    <v-spacer></v-spacer>
+    <v-toolbar elevation="0" width="100%" tile dense absolute flat >
+      <v-spacer/>
+      <v-toolbar-title class="white--text" >Procestujte s námi svět!</v-toolbar-title>
+      <v-spacer/>
+    </v-toolbar>
 
   </v-app-bar>
 </template>
 
 <script>
-// import {mapState} from "vuex";
 
 export default {
   name: "Navbar",
@@ -29,15 +32,11 @@ export default {
         return this.$store.state.drawer;
       },
       set(val) {
-        // console.log(val)
         return this.$store.dispatch('setDrawer',
             val
         );
       },
     }
-  },
-  mounted() {
-    console.log(this.drawer);
   },
   data() {
     return {
@@ -48,5 +47,7 @@ export default {
 </script>
 
 <style scoped>
-
+.appbar >>> .v-toolbar__content {
+  padding: 0px !important;
+}
 </style>

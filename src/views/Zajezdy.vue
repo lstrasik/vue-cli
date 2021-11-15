@@ -22,7 +22,3 @@ export default {
   name: "Zajezdy"
 }
 </script>
-
-<style scoped>
-
-</style>

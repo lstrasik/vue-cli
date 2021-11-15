@@ -4,8 +4,9 @@ import App from './App.vue';
 import router from './router';
 import vuetify from './plugins/vuetify'
 import store from './store'
-// Vue.use(Vuetify);
-// Vue.use(router);
+import VueAxios from './plugins/axios'
+
+Vue.use(VueAxios)
 
 new Vue({
     el: '#app',
