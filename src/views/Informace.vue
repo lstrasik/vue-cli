@@ -1,5 +1,5 @@
 <template>
-    <div  class="home pa-10">
+    <div class="home pa-10">
         <h1>O Kudrnovi</h1>
         <h3 class="big black-text">Jak to doopravdicky bylo s našim Kudrnou a jeho kolomaznickým rodem</h3>
         <h4>To je histórie dlouhá jako lidstvo samo.</h4>
@@ -23,6 +23,6 @@
 
 <script>
   export default {
-    name: 'Home',
-      }
+    name: 'Informace',
+  }
 </script>
